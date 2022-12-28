@@ -1,0 +1,248 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,200;0,600;1,200;1,500;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #1B2029;
+    color: #fff;
+}
+
+/* Sidebar-horizontal */
+
+.header,
+.navigation_header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.header {
+    position: fixed;
+    background-color: #171b22;
+    box-shadow: 1px 1px 4px black;
+    height: 3.5em;
+    justify-content: space-between;
+    padding: 1 5%;
+    z-index: 5;
+    width: 100vw;
+    top: 0px;
+}
+
+
+.img_logo_header {
+    width: 100px;
+}
+
+.navigation_header {    
+    gap: 4em;
+    z-index: 2;
+    margin-left: 50px;
+    margin-right: 40px;
+}
+
+#logout a {
+    color: white;
+    font-size: 17px;
+    background-color: #0a0d13;
+    border: 2px solid black;
+    border-radius: 30px;
+    padding: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin: 0px;
+}
+
+#logout a:hover {
+    color: #8880FE;
+    background-color: #0a0d13;
+    border: 2px solid black;
+    border-radius: 30px;
+    padding: 20px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+
+.foto_perfil {
+    width: 50px;
+    height: 50px;
+    margin-top: 5px;
+    border: 2px solid #8880FE;
+    border-radius: 100px;
+}
+
+
+.navigation_header a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    transition: 0.5s;
+}
+
+.navigation_header a:hover {
+    color: #8880FE;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 30px;
+}
+
+.btn_icon_header {
+    background-color: transparent;
+    border: none;
+    color: white;
+    cursor: pointer;
+    display: none;
+}
+
+/* sidenar na vertical */
+
+.sidebar-vertical {
+    float: left;
+    z-index: 2;
+    position: fixed;
+    background-color: #13161b;
+    box-shadow: 1px 1px 2px black;
+    height: 100vw;
+    width: 200px;
+    margin-top: 0px;
+    top: 57px;
+}
+
+
+span {
+    color: white;
+    transition: 0.4s;
+    margin-left: 5px;
+}
+
+span:hover {
+    color: #8880FE;
+}
+
+.sidebar-link {
+    color: white;
+    margin-left: 10px;
+    font-size: 17px;
+    text-decoration: none;
+}
+
+.sidebar-item, 
+.sidebar-item-active {
+    margin-top: 15px;
+    padding:8px;
+    transition: 0.4s;
+
+}
+
+.sidebar-item:hover {
+    background-color: rgba(0, 0, 0, 0.5)    ;
+}
+
+.sidebar-item-active {
+    background-color: rgba(0, 0, 0, 0.5)    ;
+
+}
+
+.span-active {
+    color: #8880FE  ;
+}
+
+.box {
+    position: absolute;
+    top: 50%;
+    left: 55%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.2);
+    padding: 15px;
+    border-radius: 15px;
+    width: 30%;
+}
+
+fieldset {
+    border: 3px solid #8880FE;
+}
+
+legend {
+    border: 1px solid #8880FE;
+    padding: 10px;
+    text-align: center;
+    background-color: #8880FE;
+    border-radius: 8px;
+}
+
+.inputBox {
+    position: relative;
+} 
+
+.inputUser {
+    background: none;
+    border: none;
+    border-bottom: 1px solid white;
+    outline: none;
+    color: white;
+    font-size: 15px;
+    width: 100%;
+    letter-spacing: 2px;
+}
+
+.labelInput {
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    pointer-events: none;
+    transition: 0.5s;
+}
+
+.inputUser:focus ~ .labelInput,
+.inputUser:valid ~.labelInput {
+    top: -20px;
+    font-size: 12px;
+    color: #8880FE;
+}
+
+.btn {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 10px;
+    padding: 4px;
+    /* border: 1px solid purple; */
+}
+
+#submit {
+    background-color: #8880FE;
+    width: 50%;
+    border: none;
+    padding: 15px;
+    color: white;
+    font-size: 15px;
+    border-radius: 20px;
+    cursor: pointer;
+    margin-left: 5%;
+    margin-bottom: 6px;
+}
+
+#submit:hover {
+    background-color: #564dc9;
+}
+
+
+.btn_lixo{
+    color: red;
+    margin-right: 50px;
+}
+
+.btn_lixo:hover{
+    color: white;
+}
+
+.label_foto {
+    font-size: 18px;
+    color: #8880FE;
+    overflow: hidden;
+}

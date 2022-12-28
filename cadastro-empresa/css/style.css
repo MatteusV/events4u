@@ -1,0 +1,198 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,200;0,600;1,200;1,500;1,700&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+
+}
+
+body {
+    background: #1B2029;
+    color: #fff;
+}
+
+.img_logo_header {
+    width: 100px;
+}
+
+.header,
+.navigation_header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.header {
+    background-color: #171b22;
+    box-shadow: 1px 1px 4px black;
+    height: 3.5em;
+    justify-content: space-between;
+    padding: 1 5%;
+}
+
+
+.navigation_header {
+    gap: 4em;
+    z-index: 2;
+}
+
+
+.navigation_header a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    transition: 0.5s;
+}
+
+.navigation_header a:last-child {
+    margin-right: 30px;
+}
+
+.navigation_header a:hover {
+    color: #8880FE;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 30px;
+}
+
+
+.btn_icon_header {
+    background-color: transparent;
+    border: none;
+    color: white;
+    cursor: pointer;
+    display: none;
+}
+
+.h1-flex {
+    float: center;
+    z-index: 999;
+    margin-top: 50px;
+    
+}
+
+h1{
+    color: #d4d3df;
+    font-size: 50px;
+    text-align: center;
+}
+
+.box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.2);
+    padding: 15px;
+    border-radius: 15px;
+    width: 20%;
+}
+
+fieldset {
+    border: 2px solid #8880FE;
+}
+
+legend {
+    border: 1px solid #8880FE;
+    padding: 10px;
+    text-align: center;
+    background-color: #8880FE;
+    border-radius: 8px;
+}
+
+.inputBox {
+    position: relative;
+} 
+
+.inputUser {
+    background: none;
+    border: none;
+    border-bottom: 1px solid white;
+    outline: none;
+    color: white;
+    font-size: 15px;
+    width: 100%;
+    letter-spacing: 2px;
+}
+
+.labelInput {
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    pointer-events: none;
+    transition: 0.5s;
+}
+
+.inputUser:focus ~ .labelInput,
+.inputUser:valid ~.labelInput {
+    top: -20px;
+    font-size: 12px;
+    color: #8880FE;
+}
+
+#submit {
+    background-color: #8880FE;
+    width: 90%;
+    border: none;
+    padding: 15px;
+    color: white;
+    font-size: 15px;
+    border-radius: 20px;
+    cursor: pointer;
+    margin-left: 5%;
+    margin-bottom: 6px;
+}
+
+#submit:hover {
+    background-color: #564dc9;
+}
+
+section.images .circle {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background: linear-gradient(45deg, #1B2029, #8880FE);
+    clip-path: circle(35% at right 80%);
+    z-index: -1;
+}
+
+.link a {
+    text-decoration: none;
+    color: white;
+}
+
+.link a:hover {
+    font-size: 20px;
+    text-decoration: underline;
+    transition-duration: 0.3s;
+}
+
+
+@media only screen and (min-width: 900px) and (max-width: 1200px) {
+    section.images img {
+        width: 110%;
+    }
+
+    section.images .circle {
+        clip-path: circle(35% at right 80%);
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    .box {
+        width: 100vw;
+    }
+}
+
+@media only screen and (max-width: 450px) {
+     h1 {
+        font-size: 2rem;
+    }
+
+     form label span,
+     form input[type="submit"] {
+        font-size: 1rem;
+    }
+}

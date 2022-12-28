@@ -1,0 +1,324 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,200;0,600;1,200;1,500;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #1B2029;
+    color: #fff;
+}
+
+/* Sidebar-horizontal */
+
+.header,
+.navigation_header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.header {
+    position: fixed;
+    background-color: #171b22;
+    box-shadow: 1px 1px 4px black;
+    height: 3.5em;
+    justify-content: space-between;
+    padding: 1 5%;
+    z-index: 5;
+    width: 100vw;
+    top: 0px;
+}
+
+
+.img_logo_header {
+    width: 100px;
+}
+
+.navigation_header {    
+    gap: 4em;
+    z-index: 2;
+    margin-left: 50px;
+    margin-right: 40px;
+}
+
+#logout a {
+    color: white;
+    font-size: 17px;
+    background-color: #0a0d13;
+    border: 2px solid black;
+    border-radius: 30px;
+    padding: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+#logout a:hover {
+    color: #8880FE;
+    background-color: #0a0d13;
+    border: 2px solid black;
+    border-radius: 30px;
+    padding: 20px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.foto_perfil {
+    width: 50px;
+    height: 50px;
+    margin-top: 5px;
+    border: 2px solid #8880FE;
+    border-radius: 100px;
+}
+
+.navigation_header a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    transition: 0.5s;
+}
+
+.navigation_header a:hover {
+    color: #8880FE;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 30px;
+}
+
+.btn_icon_header {
+    background-color: transparent;
+    border: none;
+    color: white;
+    cursor: pointer;
+    display: none;
+}
+
+/* sidenar na vertical */
+
+.sidebar-vertical {
+    float: left;
+    z-index: 2;
+    position: fixed;
+    background-color: #13161b;
+    box-shadow: 1px 1px 2px black;
+    height: 923px;
+    width: 200px;
+    margin-top: 0px;
+    top: 57px;
+}
+
+
+span {
+    color: white;
+    transition: 0.4s;
+    margin-left: 5px;
+}
+
+span:hover {
+    color: #8880FE;
+}
+
+.sidebar-link {
+    color: white;
+    margin-left: 10px;
+    font-size: 17px;
+    text-decoration: none;
+}
+
+.sidebar-item, 
+.sidebar-item-active {
+    margin-top: 15px;
+    padding:8px;
+    transition: 0.4s;
+
+}
+
+.sidebar-item:hover {
+    background-color: rgba(0, 0, 0, 0.5)    ;
+}
+
+.sidebar-item-active {
+    background-color: rgba(0, 0, 0, 0.5)    ;
+
+}
+
+.span-active {
+    color: #8880FE  ;
+}
+
+
+/* cadastrar evento */
+
+
+.container {
+    background-color: #171b22;
+    border: 2px solid #8880FE;
+    border-radius: 10px;
+    width: 50%;
+    margin: auto;
+    margin-top: 100px;
+    margin-right: 400px;
+}
+
+#h2_container {
+    text-align: center;
+    font-size: 40px;
+    margin-top: 10px;
+    font-family: 'Alkalami', serif;
+    font-family: 'Inter Tight', sans-serif;
+    text-decoration: underline;
+}
+
+#p_container {
+    padding-left: 50px;
+    font-size: 23px;
+    font-family: 'Alkalami', serif;
+    font-family: 'Inter Tight', sans-serif;
+    text-align: center;
+}
+
+
+form {
+    width: 50%;
+    margin-left: 25%;
+    margin-bottom: 30px;
+}
+
+fieldset {
+    margin-top: 10px;
+    border: 3px solid #8880FE;
+    box-shadow: 7px 7px 14px black;
+    border-radius: 10px;
+}
+
+legend {
+    border: 2px solid black;
+    padding: 10px;
+    text-align: center;
+    background-color: #8880FE;
+    border-radius: 8px;
+}
+
+.inputBox {
+    position: relative;
+    margin-left: 5px;
+} 
+
+.inputUser {
+    background: none;
+    border: none;
+    border-bottom: 1px solid white;
+    outline: none;
+    color: white;
+    font-size: 15px;
+    width: 100%;
+    letter-spacing: 2px;
+}
+
+.labelInput {
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    pointer-events: none;
+    transition: 0.5s;
+}
+
+#submit {
+    background-color: #8880FE;
+    width: 60%;
+    margin-bottom: 5px;
+    margin-left: 100px;
+    margin-bottom: 10px;
+    border: 2px solid black;
+    padding: 10px;
+    color: white;
+    font-size: 15px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+#submit:hover {
+    background-color: #5a51d6;
+}
+
+#submit_folder {
+    background-color: #8880FE;
+    border: 2px solid black;
+    color: white;
+    padding: 8px;
+    border-radius: 20px;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+#submit_folder:hover {
+    background-color: #5a51d6;
+}
+.inputUser:focus ~ .labelInput,
+.inputUser:valid ~.labelInput {
+    top: -20px;
+    font-size: 12px;
+    color: #8880FE;
+}
+
+
+/*formulario para editar os dados do banco*/
+#update {
+    background-color: #8880FE;
+    width: 60%;
+    margin-left: 100px;
+    margin-bottom: 10px;
+    border: 2px solid black;
+    padding: 10px;
+    color: white;
+    font-size: 15px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+#update:hover {
+    background-color: #5a51d6;
+}
+
+
+
+@media screen and (max-width: 800px) {
+    .btn_icon_header {
+        display: block;
+    }
+
+    .navigation_header {
+        position: absolute;
+        flex-direction: column;
+        top: 0;
+        background-color: #171b22;
+        height: 110vh;
+        width: 35vw;
+        padding: 16px;
+        animation-duration: 1s;
+        margin-left: -100vw;
+    }
+}
+
+@keyframes showSidebar {
+    from {
+        margin-left: -100vw;
+    }
+
+    top {
+        margin-left: 0vw;
+    }
+}
+
+@keyframes showSidebar {
+    from {
+        margin-left: 0vw;
+    }
+
+    top {
+        margin-left: -100vw;
+    }
+}

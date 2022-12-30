@@ -1,6 +1,6 @@
 <?php
 session_start();
-include('conexao.php')
+require_once('/opt/lampp/htdocs/events4u/config.php')
 ?> 
 <!DOCTYPE html>
 <html lang="pt-bt">

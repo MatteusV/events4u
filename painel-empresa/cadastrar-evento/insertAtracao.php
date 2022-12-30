@@ -1,7 +1,6 @@
 <?php
 include_once("/xampp/htdocs/events4u/config.php");
-include_once("/xampp/htdocs/events4u/login-empresa/verifica-login-empresa.php");
-
+require_once('/opt/lampp/htdocs/events4u/config.php');
 
     if(isset($_POST['add_atracao'])) {
         $id = $_GET['id'];

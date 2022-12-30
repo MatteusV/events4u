@@ -1,6 +1,6 @@
 <?php
 include('../verifica-login.php');
-include('/xampp/htdocs/events4u/config.php');
+require_once('/opt/lampp/htdocs/events4u/config.php');
 $email = $_SESSION['email'];
 
 $sql = mysqli_query($conexao, "SELECT * FROM usuarios WHERE email = '{$email}'");

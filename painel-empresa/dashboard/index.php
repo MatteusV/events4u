@@ -1,6 +1,6 @@
 <?php
 include('../verifica-login-empresa.php');
-include('/opt/lampp/htdocs/events4u/config.php');
+require_once('/opt/lampp/htdocs/events4u/config.php');
 
 
 $email = $_SESSION['email'];
@@ -118,7 +118,7 @@ $email = $_SESSION['email'];
 
 <?php
 
-            $resultEventos = mysqli_query($conexao, "SELECT * FROM eventos WHERE id_empresa = '{$id_empresa}' AND online = '1' ORDER BY data_evento ASC");
+           $resultEventos = mysqli_query($conexao, "SELECT * FROM eventos WHERE id_empresa = {'$id_empresa'} AND online = '1'");
 
                 if(mysqli_num_rows($resultEventos) > 0) {
 

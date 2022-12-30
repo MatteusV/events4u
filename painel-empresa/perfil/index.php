@@ -1,6 +1,6 @@
 <?php
 include('../verifica-login-empresa.php');
-include('/xampp/htdocs/events4u/config.php');
+require_once('/opt/lampp/htdocs/events4u/config.php');
 
 $email = $_SESSION['email'];
 // echo $email;

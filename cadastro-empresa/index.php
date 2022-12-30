@@ -1,7 +1,7 @@
 <?php
 
 if (isset($_POST['submit'])) {
-    include_once('../config.php');
+    require_once('/opt/lampp/htdocs/events4u/config.php');
 
     // print_r('Nome: ' . $_POST['nome']);
     // print_r('<br>');

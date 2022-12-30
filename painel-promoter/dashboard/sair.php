@@ -1,6 +1,6 @@
 <?php
-include('/xampp/htdocs/events4u/login-promoter/verifica-login.php');
-include('/xampp/htdocs/events4u/config.php');
+include('../verifica-login.php');
+require_once('/opt/lampp/htdocs/events4u/config.php');
 
 $id_usuario = $_SESSION['id_usuario'];
 $id_evento = $_GET['id'];

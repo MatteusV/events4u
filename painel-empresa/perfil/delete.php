@@ -1,6 +1,6 @@
 <?php
 include('../verifica-login-empresa.php');
-include('/xampp/htdocs/events4u/config.php');
+require_once('/opt/lampp/htdocs/events4u/config.php');
 
 if(isset($_GET['id'])) {
     $id_empresa = $_GET['id'];

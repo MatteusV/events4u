@@ -1,6 +1,6 @@
 <?php
 include('../verifica-login.php');
-include('/xampp/htdocs/events4u/config.php');
+require_once('/opt/lampp/htdocs/events4u/config.php');
 
 $id_usuario = $_SESSION['id_usuario'];
 

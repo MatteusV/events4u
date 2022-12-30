@@ -1,63 +1,3 @@
-<?php
-session_start();
-if (isset($_POST['submit'])) {
-
-    // print_r('Nome: ' . $_POST['nome']);
-    // print_r('<br>');
-    // print_r('Email: ' . $_POST['email']);
-    // print_r('<br>');
-    // print_r('Senha: ' . $_POST['senha']);
-    // print_r('<br>');
-    // print_r('Telefone: ' . $_POST['telefone']);
-    // print_r('<br>');
-    // print_r('Sexo: ' . $_POST['genero']);
-    // print_r('<br>');
-    // print_r('instagram: ' . $_POST['instagram']);
-    // print_r('<br>');
-    // print_r('Cidade: ' . $_POST['cidade']);
-    // print_r('<br>');
-    // print_r('Estado: ' . $_POST['estado']);
-
-    include_once('../config.php');
-
-    $nome =  $_POST['nome'];
-    $email =  $_POST['email'];
-    $senha =  md5($_POST['senha']);
-    $telefone = $_POST['telefone'];
-    $cpf = $_POST['cpf'];
-    $sexo = $_POST['genero'];
-    $tipo = $_POST['tipo_eventos'];
-    $data = $_POST['data_nasc'];
-    $instagram = $_POST['instagram'];
-    $cidade = $_POST['cidade'];
-    $estado = $_POST['estado'];
-
-    $verificaUsuario = mysqli_query($conexao, "SELECT email FROM usuarios WHERE email = '$email'");
-    
-    if(mysqli_num_rows($verificaUsuario) > 0 ) {
-        ?>
-        <script>
-            function function1()
-            {
-                alert("Email já cadastrado, tente outro");
-            }
-        </script>
-        <?php
-    }
-    else {
-         $result = mysqli_query($conexao, "INSERT INTO usuarios(nome, email, senha, telefone, sexo, instagram, tipo_evento, data_nascimento, cidade, estado, cpf) VALUES('$nome', '$email', '$senha', '$telefone', '$sexo', '$instagram', '$tipo', '$data', '$cidade', '$estado', '$cpf')");
-
-        ?>
-        <script>
-            function function1()
-            {
-                alert("Cadastrado com sucesso");
-            }
-        </script>
-        <?php
-    }   
-}
-?> 
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -67,27 +7,6 @@ if (isset($_POST['submit'])) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="../cadastro-promoter/css/cadastro.css" rel="stylesheet">
     <title>Cadastro do Promoter</title>
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,200;0,600;1,200;1,500;1,700&display=swap');
-
-
-        body {
-            background: #1B2029;
-            color: white;
-        }
-
-        h1,
-        h2 {
-            color: #d4d3df;
-            font-size: 50px;
-            text-align: center;
-        }
-
-        .link {
-            text-decoration: none;
-            color: white;
-        }
-    </style>
 </head>
 
 <body>
@@ -117,7 +36,7 @@ if (isset($_POST['submit'])) {
         <h1>Criar conta | promoter</h1>
     </div>
     <div class="box">
-        <form action="index.php" method="post">
+        <form action="insertUsuario.php" method="post">
             <fieldset>
                 <legend><b>Cadastro do Promoter</b></legend>
                 <br>

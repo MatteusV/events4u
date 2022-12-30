@@ -22,9 +22,11 @@ if(mysqli_num_rows($resultId) > 0) {
             $venda = $_POST['venda'];
 
 
-            $verifica = mysqli_query($conexao, "SELECT * FROM eventos WHERE id_empresa = '{$id_empresa}' AND local_evento = '{$endereco}' AND data_evento = '{$data}' AND online = '1'");
+            // $verifica = mysqli_query($conexao, "SELECT * FROM eventos WHERE id_empresa = '{$id_empresa}' AND local_evento = '{$endereco}' AND data_evento = '{$data}' AND online = '1'");
 
-            if(mysqli_num_rows($verifica) > 0 ) {
+            $verifica = mysqli_query($conexao, "SELECT * FROM eventos WHERE id_empres = '{$id_empresa} AND local_evento = '{$endereco}' AND data_evento = '{$data}' AND online = 1");
+
+            if(mysqli_num_rows($verifica) > 0) {
                 ?>
                 <script>
                     alert('Evento com o mesmo dia e endereço já cadastrado!');
@@ -34,7 +36,7 @@ if(mysqli_num_rows($resultId) > 0) {
             }
             else {
 
-            $result = mysqli_query($conexao, "INSERT INTO eventos (nome, tipo_evento, data_evento, local_evento, cidade, qtd_promoter, n_seguidores, link_venda, id_empresa) VALUES('$nome', '$tipo', '$data', '$endereco', '$cidade', '$qntdPromoter', '$seguidores', '$venda', '$id_empresa')") or die($mysqli -> error);
+            $result = mysqli_query($conexao, "INSERT INTO eventos (nome, tipo_evento, data_evento, local_evento, cidade, qtd_promoter, n_seguidores, link_venda, id_empresa) VALUES('$nome', '$tipo', '$data', '$endereco', '$cidade', '$qntdPromoter', '$seguidores', '$venda', '$id_empresa')");
 
             ?>
             <script>

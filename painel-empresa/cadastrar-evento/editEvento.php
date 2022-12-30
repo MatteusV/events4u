@@ -1,7 +1,6 @@
 <?php
 include('../verifica-login-empresa.php');
-include('/xampp/htdocs/events4u/config.php');
-
+require_once('/opt/lampp/htdocs/events4u/config.php');
 if(isset($_POST['update'])) {
     $id_evento = $_GET['id'];
     $nome =  $_POST['nome_evento'];

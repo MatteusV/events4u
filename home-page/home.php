@@ -39,7 +39,7 @@ require_once('/opt/lampp/htdocs/events4u/config.php');
         <img class="fundo_evento" src="img/fundo.jpeg" alt="Evento de musica">
         <h1 id="h1_evento">À procura de promoters para seu evento!?</h1>
         <p id="p_evento">Temos a solução para isso!</p>
-        <a id="link_evento" target="_blank" href="../login-empresa/index-empresa.php">Procure agora mesmo</a>
+        <button id="link_evento" onclick="empresa()">Procure agora mesmo</button>
      </div>
 
      <div class="informativo">
@@ -54,7 +54,7 @@ require_once('/opt/lampp/htdocs/events4u/config.php');
         <img class="fundo_promoter" src="img/balada.jpg" alt="">
         <h1 id="h1_promoter">À procura de eventos para ser promoter!?</h1>
         <p id="p_promoter">Cadastre-se como promoter e concorra pelas vagas</p>
-        <a id="link_promoter" target="_blank" href="../login-promoter/index.php">Concorra agora mesmo</a>
+        <button id="link_promoter" onclick="promoter()">Concorra agora mesmo</button>
      </div>
 
      <div class="informativo">
@@ -67,15 +67,56 @@ require_once('/opt/lampp/htdocs/events4u/config.php');
         <p id="p2_promoter">O promoter de balada é aquele profissional responsável por organizar, popularizar e divulgar uma balada nas etapas que antecedem o seu acontecimento. De uma forma certeira, o promoter é essencial para o sucesso ou o fracasso de um evento.</p>
     </div>
 
-    <div id="quemsomos">
-        <h2 id="h2_promoter">Events4U</h2> 
-        
-        <img src="img/Events4u(branco).png" id="img_logo" alt="" srcset="">
-<br>
-        <p id="p2_promoter">A tecnologia é uma área de constante mudança e evolução, neste projeto, tivemos a iniciativa e o requisito de criar um site em um novo domínio, pensando nos organizadores de eventos, os quais desejam aumentar suas vendas de um jeito inovador e obter um futuro sucesso de seus eventos com a ajuda de promoters. A ideia abrange a utilização de influenciadores digitais tanto da cidade onde ocorrerá os eventos, quanto influenciadores de fora da cidade, mas que tenham grande influência naquele local, tudo isso com um melhor custo-benefício.<br><br> 
-        Nosso principal foco, é trazer um site de fácil interação tanto do promoter quanto o organizador, sendo direto e podendo filtrar os interesses de ambos os lados, para não perderem tempo, que é algo crucial na vida de todos.  </p>
 
-    </div>
+    <footer>
+        
+        <div class="footerBorder">
+
+            <img onclick="linkHome()" id="imgFooter" src="./img/Events4u(branco).png" alt="" srcset=""><span onclick="linkHome()">EVENTS4U</span>
+
+
+            <a id="emailSuporte" target="_BLANK" href="mailto:suporte@events4u.com">suporte@events4u.com</a>
+        </div>
+
+    </footer>
+
 </body>
 <script src="js/header-responsivo.js"></script>
+<script>
+
+function linkHome() {
+    window.location.replace('/events4u/home-page/home.php');
+} 
+
+    function empresa() {
+
+        var x;
+        var r=confirm("Tem certeza que deseja sair?");
+        if (r==true)
+        {
+        x= window.location.replace('/events4u/login-empresa/index-empresa.php');
+        }
+        else
+        {
+        x= window.location.reload('/events4u/home-page/home.php');
+        }
+
+    }
+
+    function promoter() {
+
+        var x;
+        var r=confirm("Tem certeza que deseja sair?");
+        if (r==true)
+        {
+        x= window.location.replace('/events4u/login-promoter/index.php');
+        }
+        else
+        {
+        x= window.location.reload('/events4u/home-page/home.php');
+        }
+
+    }
+
+</script>
 </html>

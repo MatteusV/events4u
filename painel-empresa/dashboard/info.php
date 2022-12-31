@@ -232,23 +232,6 @@ $email = $_SESSION['email'];
                 <input type="submit" class="update" name="add_patrocinador" id="add_patrocinador" value="Adicionar patrocinador">
             </fieldset>
         </form>
-
-
-    <!-- <form class="form_evento" action="insertConteudo.php<?php echo "?id=". $id_evento?>" enctype="multipart/form-data" method="post">
-        <fieldset>
-            <legend><b>Adicionar conteudo para o promoter</b></legend>
-                <div class="inputBox">
-                        <input type="msg" name="texto" id="texto" class="inputUser" maxlength="100">
-                        <label for="texto" class="labelInput">Texto para o post se necessario</label>
-                </div>
-                <br>
-                <label for="foto_conteudo">Foto para o post:</label><br>
-                <input type="file" name="foto_conteudo" id="foto_conteudo" accept="image/*" required>
-
-                <input type="submit" class="update" name="add_conteudo" id="add_conteudo" value="Enviar">
-
-        </fieldset>
-    </form> -->
     
 </div>
 <?php 

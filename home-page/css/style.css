@@ -27,7 +27,7 @@ body {
 
 .header {
     position: fixed;
-    background-color: #171b22;
+    background-color: #171b22ad;
     box-shadow: 1px 1px 4px black;
     height: 3.5em;
     justify-content: space-between;
@@ -73,7 +73,6 @@ body {
 
 .container_evento {
     padding-bottom: 0;
-    padding-top: 1em;
     height: 100vh;
     transition: 1s;
     display: inline-block;
@@ -135,7 +134,7 @@ body {
     background-color: black;
     border-radius: 10px;
     /* border: 3px solid #8880FE; */
-    text-decoration: none;
+    border: none;
     padding: 20px;
     bottom: 39%;
     left: 3%;
@@ -208,6 +207,39 @@ body {
     margin-bottom: 7%;
     margin-left: 8%;
     margin-right: 8%;   
+}
+
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: #171b22;
+    height: 150px;
+}
+
+.footerBorder {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    border: 1px solid gray;
+    width: 80%;
+    height: 100px;
+    padding: 20px;
+}
+
+#imgFooter {
+    width: 150px;
+}
+
+#emailSuporte, span {
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+}
+
+#emailSuporte:hover,
+span:hover {
+    color: #8880FE;
 }
 
 

@@ -22,7 +22,7 @@ session_start();
 
 <body>
 
-    <div class="header">
+    <header class="header">
 
         <button onclick="toggleSideBar()" class="btn_icon_header">
             <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
@@ -34,14 +34,14 @@ session_start();
             <img class="img_logo_header" src="img/Events4u(branco).png" alt="Logo Events4U">
         </div>
 
-        <div class="navigation_header">
-            <a href="/events4u/login-empresa/index-empresa.php">Home</a>
+        <nav class="navigation_header">
+            <a href="/events4u/home-page/home.php">Home</a>
             <a href="/events4u/painel-empresa/cadastrar-evento/index.php">Divulgue seu evento</a>
             <a href="/events4u/painel-promoter/dashboard/index.php">Seja promoter</a>            
             <a href="/events4u/home-page/home.php#quemsomos">Quem somos?</a>
-        </div>
+    </nav>
     
-    </div>
+    </header>
 
     <div class="h1-flex">
         <h1>Login | Empresa</h1>

@@ -117,7 +117,7 @@ $email = $_SESSION['email'];
         <h2 id="h2_container">Cadastre seu evento</h2>
         <p id="p_container">Para que você ache promoters precisamos que cadastre seu evento:</p>
 
-        <form  enctype="multipart/form-data" action="insertEvento.php" method="post">
+        <form  enctype="multipart/form-data" action="inserEvento.php" method="post">
             <fieldset>
                 <legend>Cadastrar o evento</legend>
 
